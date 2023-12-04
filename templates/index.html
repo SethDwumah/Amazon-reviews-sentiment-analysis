@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title> Amazon Review Sentiment Prediction</title>
+
+    </head>
+
+    <h1>Amazon Review Sentiment Prediction</h1>
+    <form method='POST', action="{{url_for ('predict')}}">
+        <label for = 'review_text'>Enter your review here</label>
+        <input type='text', name='review_text' required>
+        <br></br>
+        <input type="submit" value ="Predict Sentiment">
+    </form>
+   
+
+
+
+
+    </html>
+

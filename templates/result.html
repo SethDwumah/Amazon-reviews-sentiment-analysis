@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prediction Result</title>
+</head>
+<body>
+	<h1>Amazon Sentiment Classification Result</h1>
+    <p>The predicted Sentiment is: {{prediction}}</p>
+        
+    {% if prediction ==0 %}
+        <h1>The Sentiment is Negative</h1>
+    {% elif prediction==1 %}
+    <h1> The Sentiment is Positive</h1>
+    {%else%}
+    <h1>Neutral</h1>
+    {% endif %}
+	
+	<br><br>
+	<a href="/">Go to home page</a>
+</body>
+</html>
