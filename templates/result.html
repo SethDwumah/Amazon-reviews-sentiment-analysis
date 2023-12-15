@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Prediction Result</title>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        .result {
+            text-align: center;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+        
+        .link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .link a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-	<h1>Amazon Sentiment Classification Result</h1>
-    <p>The predicted Sentiment is: {{prediction}}</p>
-        
-    {% if prediction ==0 %}
-        <h1>The Sentiment is Negative</h1>
-    {% elif prediction==1 %}
-    <h1> The Sentiment is Positive</h1>
-    {%else%}
-    <h1>Neutral</h1>
-    {% endif %}
+    <h1>Amazon Sentiment Classification Result</h1>
+    
+    <div class="result">
+        {% if prediction == 0 %}
+            <h1>The Sentiment is Negative</h1>
+        {% elif prediction == 1 %}
+            <h1>The Sentiment is Positive</h1>
+        {% else %}
+            <h1>Neutral</h1>
+        {% endif %}
+    </div>
 	
-	<br><br>
-	<a href="/">Go to home page</a>
+	<div class="link">
+	    <a href="/">Go to home page</a>
+	</div>
 </body>
 </html>
